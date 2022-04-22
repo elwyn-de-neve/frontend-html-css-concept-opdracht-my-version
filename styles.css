@@ -1,0 +1,270 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Main
+        4.3 Footer
+    5. Media Queries
+////////////////////////*/
+
+/*/////////////////////////////////////////////////////////////////////////////////////
+                                1. Global Styles
+/////////////////////////////////////////////////////////////////////////////////////*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid red;
+}
+
+:root {
+    --primary-color: #5722CD;
+    --secondary-color: #4845E4;
+    --tertiary-color: #ED4385;
+    --text-color-dark: #0C0C0C;
+    --text-color-light: #fff;
+    --background-color-primary: #F3F6F9;
+    --background-color-secondary: #F2F0FF;
+    --primary-color-light: #F2F0FF;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////
+                                2. Typography
+/////////////////////////////////////////////////////////////////////////////////////*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Merriweather, serif;
+    user-select: none;
+}
+
+h1 {
+    /*font-size: 1.5em;*/
+    /*font-weight: 700;*/
+}
+
+p,
+a,
+span,
+button {
+    font-family: Roboto, sans-serif;
+    user-select: none;
+    color: var(--text-color-dark);
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////
+                                3. Layout
+/////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////// 3.1 Reusables /////////////////*/
+
+.intro__outer-container,
+.header__outer-container,
+.projects__outer-container {
+    display: flex;
+    justify-content: center;
+    /* Box-model */
+    width: 100%;
+}
+
+.header__inner-container,
+.intro__inner-container,
+.projects__inner-container {
+    flex-basis: 1400px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: 2px solid green;*/
+}
+/*/////////////////////////////////////////////////////////////////////////////////////
+                                4. Areas
+/////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////// 4.1 header ////////////////////*/
+
+
+.header__outer-container {
+    background: var(--primary-color);
+    background: linear-gradient(300deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+
+
+.intro__inner-container {
+    margin: 5em 0;
+    gap: 2em;
+}
+
+.header__navbar {
+    width: 100%;
+    margin-top: 1.5em;
+}
+
+.header__navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 3em;
+}
+
+.header__navbar-item {
+    list-style-type: none;
+}
+
+.header__navbar-link {
+    /* Typography */
+    color: var(--text-color-light);
+    text-transform: capitalize;
+    text-decoration: underline 3px rgba(0, 0, 0, 0);
+}
+
+.header__navbar-link:hover,
+.header__navbar-link:focus {
+    text-decoration: underline 3px var(--tertiary-color);
+    text-underline-offset: 1em;
+    transition: text-decoration-color 300ms;
+}
+
+.header__hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding-block: 5em;
+}
+
+.header__title {
+    color: var(--text-color-light);
+    font-size: clamp(1rem, 4.5vw, 3rem);
+    width: 30ch;
+    text-align: center;
+}
+
+.header__subtitle {
+    color: var(--text-color-light);
+    text-align: center;
+    font-weight: 300;
+    font-size: clamp(1rem, 4.5vw, 1.8rem);
+}
+
+.button--active {
+    letter-spacing: 2px;
+    font-weight: 400;
+    background-color: var(--tertiary-color);
+    color: var(--text-color-light);
+    padding: 1rem 2rem;
+    /*padding-inline: 2rem;*/
+    border-radius: 2rem;
+    border: none;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.button--active:hover,
+.button--active:focus {
+    outline: 1px solid var(--text-color-light);
+}
+
+.header__squiggle-image {
+    position: relative;
+    bottom: -40px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url('./images/squiggle_line_stripe.svg');
+}
+
+/*///////////////// 4.2 main //////////////////////*/
+
+.intro__text {
+    /*width: 30ch;*/
+    color: var(--primary-color);
+    font-size: clamp(1rem, 4.5vw, 1.8rem);
+    text-align: center;
+    padding-inline: clamp(1rem, 15vw, 13rem);
+    /*white-space: pre-line;*/
+}
+
+.intro__contact {
+    font-weight: 500;
+    margin-top: 3em;
+}
+
+.intro__link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.projects__outer-container {
+    background-color: var(--background-color-primary)
+}
+
+.projects__inner-container {
+
+}
+
+.projects__wrapper {
+    display: flex;
+}
+
+.projects__info {
+
+}
+
+.projects__title {
+
+}
+
+.projects__text {
+
+}
+
+.projects__link {
+
+}
+
+.projects__article-image-wrapper {
+
+}
+
+.projects__article-image {
+
+}
+
+/*///////////////// 4.3 footer ////////////////////*/
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////
+                                5. Media Queries
+/////////////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width: 576px) {
+    /*    p {
+            font-size: 16px;
+        }*/
+}
+
+/*
+@media screen and (max-width: 576px) {
+
+}*/
